@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link href="./src/custom.css" rel="stylesheet">
+    <title>Home | [SITE]</title>
+  </head>
+
+
+  <body>
+    <div id="home" class="container-fluid noxPad bg-img" style="background-image: url('./src/us-flag-dark-vblur.jpg');">
+      <!--  Add before navbar to collapse navigation menu when clicking outside of nav  -->
+      <a
+        class="close-navbar-toggler collapsed" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#searchInput-container" 
+        aria-controls="searchInput-container" 
+        aria-expanded="false" 
+        aria-label="Toggle Search Bar"
+        ></a>
+
+      <header class="container-fluid">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-brand ms-md-5"><a class="navLk text-light" href="./index.html">
+              <img src="https://via.placeholder.com/65?text=Logo" alt="logo image" width="65"></a>
+              <a href="./index.html" class="navLk-lt ms-1">[Name]</a>
+            </div>
+          <!-- <div class="col-6 text-light text-center box"><h1>[Comp Name]</h1></div> -->
+
+          <!-- Search Bar & Icon | Hamburg Menu -->
+            <!-- Search Icon -->
+            <div class="btn-toolbar d-flex justify-content-end" role="toolbar">
+              <div class="btn-group" role="group">
+                <button 
+                  id="searchBarIcon"
+                  class="btn navLk-lt me-1"
+                  type="button"
+                  data-bs-toggle="collapse"     
+                  data-bs-target="#searchInput-container">
+                  <!-- Search Icon Vector (svg) -->
+                  <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                  </span>
+                </button> 
+
+                  <!-- Hamburg Icon & Menu -->
+                <div class="me-md-5">
+                  <button
+                    id="hamburgIcon"
+                    class="btn navLk-lt"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#navMain">
+                      <!-- <span class="navbar-toggler-icon"></span> -->
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                      </span>
+                  </button>
+                </div>
+              </div>
+
+                <!-- SIDE BAR MENU -->
+                <div id="navMain" class="offcanvas offcanvas-end bg-light bg-opacity-75 w-50" tabindex="-1">
+                  <div class="offcanvas-header hsideHeader">
+                    <h5 class="offcanvas-title text-light">Title</h5>
+                    <button 
+                      id="closeOffcanvas"
+                      class="btn btn-close btn-close-white text-reset focus" 
+                      alt="Close Button"
+                      data-bs-dismiss="offcanvas" 
+                      aria-label="Close">
+                    </button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav me-1 mwFitContent float-end">
+                      <li class="nav-item active ps-4">
+                        <a class="text-decoration-none navLk-dk" href="./index.html">Home</a></li>
+                      <ul class="navbar-nav float-end me-3 mt-3 mwFitContent">
+                        <h6 class="fw-bold">Federal</h6>
+                        <li class="nav-item ps-4">
+                          <a class="text-decoration-none navLk-dk" href="./fedExecutives.html">Executives</a>
+                        </li>
+                        <li class="nav-item ps-4">
+                          <a class="text-decoration-none navLk-dk activeLink" href="./fedJustices.html">Justices</a>
+                        </li>
+                        <li class="nav-item ps-4">
+                          <a class="text-decoration-none navLk-dk" href="./fedCongress.html">Congress</a>
+                        </li>
+                      </ul>
+                      
+                      <ul class="navbar-nav float-end mt-3 mwFitContent">
+                        <li class="nav-item">
+                          <div class="me-3">
+                            <h6 class="fw-bold my-auto pb-1 xwFitContent">State </h6>
+                            <select id="select-state" class="form-select" name="state">
+                              <option value="none" selected>--</option>
+                              <option value="alabama">Alabama</option>
+                              <option value="alaska">Alaska</option>
+                              <option value="arizona">Arizona</option>
+                              <option value="arkansas">Arkansas</option>
+                              <option value="california">California</option>
+                              <option value="colorado">Colorado</option>
+                              <option value="connecticut">Connecticut</option>
+                              <option value="delaware">Delaware</option>
+                              <option value="florida">Florida</option>
+                              <option value="georgia">Georgia</option>
+                              <option value="hawaii">Hawaii</option>
+                              <option value="idaho">Idaho</option>
+                              <option value="illinois">Illinois</option>
+                              <option value="indiana">Indiana</option>
+                              <option value="iowa">Iowa</option>
+                              <option value="kansas">Kansas</option>
+                              <option value="kentucky">Kentucky</option>
+                              <option value="louisiana">Louisiana</option>
+                              <option value="maine">Maine</option>
+                              <option value="maryland">Maryland</option>
+                              <option value="massachusetts">Massachusetts</option>
+                              <option value="michigan">Michigan</option>
+                              <option value="minnesota">Minnesota</option>
+                              <option value="mississippi">Mississippi</option>
+                              <option value="missouri">Missouri</option>
+                              <option value="montana">Montana</option>
+                              <option value="nebraska">Nebraska</option>
+                              <option value="nevada">Nevada</option>
+                              <option value="new-hampshire">New Hampshire</option>
+                              <option value="new-jersey">New Jersey</option>
+                              <option value="new-mexico">New Mexico</option>
+                              <option value="new-york">New York</option>
+                              <option value="north-carolina">North Carolina</option>
+                              <option value="north-dakota">North Dakota</option>
+                              <option value="ohio">Ohio</option>
+                              <option value="oklahoma">Oklahoma</option>
+                              <option value="oregon">Oregon</option>
+                              <option value="pennsylvania">Pennsylvania</option>
+                              <option value="rhode-island">Rhode Island</option>
+                              <option value="south-carolina">South Carolina</option>
+                              <option value="south-dakota">South Dakota</option>
+                              <option value="tennessee">Tennessee</option>
+                              <option value="texas">Texas</option>
+                              <option value="utah">Utah</option>
+                              <option value="vermont">Vermont</option>
+                              <option value="virginia">Virginia</option>
+                              <option value="washington">Washington</option>
+                              <option value="west-virginia">West Virginia</option>
+                              <option value="wisconsin">Wisconsin</option>
+                              <option value="wyoming">Wyoming</option>
+                              <option value="dc">Washington DC</option>
+                            </select>
+                          </div>
+                        </li>
+                        <button id="btn-stateOnly"
+                          class="btn btn-primary mx-auto mt-1 xwFitContent"
+                          >Submit
+                        </button>
+                      </ul>
+
+                      <ul class="navbar-nav float-end me-3 mt-3 mwFitContent">
+                        <h6 class="fw-bold">Support</h6>
+                        <li class="nav-item ps-4">
+                          <a class="text-decoration-none navLk-dk" href="./aboutus.html">About Us</a>
+                        </li>
+                        <li class="nav-item ps-4">
+                          <a class="text-decoration-none navLk-dk" href="./contactus.html">Contact Us</a>
+                        </li>
+                      </ul>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+
+      <main class="container overflow-hidden noxPad">
+        <!-- SEARCH BAR DROPS DOWN FROM HEADER -->
+        <div id="titleCon" class="container titleSection">
+          <div id="searchInput-container" class="collapse navbar-collapse float-end mt-2 searchInput-container">
+            <form class="navbar-nav">
+              <input 
+                class="nav-item form-control rounded searchInput" 
+                type="search" 
+                placeholder="Search" 
+                onkeypress="clickPress(event)">
+              <button 
+                id="btn-searchInput"
+                class="btn float-end navLk-lt xwFitContent btn-searchInput noxPad noxMarg"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="">
+                  <!-- Search Icon Vector (svg) -->
+                  <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                  </span>
+                </button> 
+            </form>
+          </div>
+        </div>
+          <!-- end of SEARCH BAR -->
+          
+          <h2 
+            class="display-4 text-center bg-light bg-opacity-75 mx-auto p-2 round xwFitContent">
+            United States Judicial Branch
+          </h2>
+          <div class="row gx-2 gy-3 pb-5 mt-3 justify-content-center">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+              <div class="card mx-2 mb-3 mx-auto p-3 p-sm-1 bg-light bg-opacity-75 h-100 round">
+                <a class="text-dark text-decoration-none" href="#">
+                  <img  
+                    class="card-img-top overflow-hidden round"
+                    src="./headshot.png" 
+                    alt="Image of President of the US">
+                  <div class="card-body noyPad p-1">
+                    <h5 class="card-title text-decoration-underline text-center px-2 pt-2">Chief Justice John G. Roberts</h5>
+                    <p class="card-text">
+                      <ul class="list-unstyled">
+                        <li class="fw-bold fst-italic">Nominated By: </dt>
+                        <li class="ps-3"><span id="chiefNom">George W. Bush</span> <span id="chiefNomparty">(Rep)</span></li>
+                        <li class="fw-bold fst-italic">Served Since: </dt>
+                        <li class="ps-3"><span id="chiefsServed">Sept. 2005</span></li>
+                      </ul>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+              <div class="card mb-3 mx-auto bg-light bg-opacity-75 p-3 p-sm-1 h-100 round">
+                <a class="text-dark text-decoration-none" href="#">
+                  <img  
+                    class="card-img-top overflow-hidden round"
+                    src="./headshot.png" 
+                    alt="Image of President of the US">
+                  <div class="card-body noyPad p-1">
+                    <h5 class="card-title text-decoration-underline text-center pt-2">Assoc. Justice Clarence Thomas</h5>
+                    <p class="card-text">
+                      <ul class="list-unstyled">
+                        <li class="fw-bold fst-italic">Nominated By: </dt>
+                        <li class="ps-3"><span id="nom1">George H.W. Bush</span> <span id="nom1party">(Rep)</span></li>
+                        <li class="fw-bold fst-italic">Served Since: </dt>
+                        <li class="ps-3"><span id="assoc1Served">Oct 1991</span></li>
+                      </ul>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+              <div class="card mb-3 mx-auto bg-light bg-opacity-75 p-3 p-sm-1 h-100 round">
+                <a class="text-dark text-decoration-none" href="#">
+                  <img  
+                    class="card-img-top overflow-hidden round"
+                    src="./headshot.png" 
+                    alt="Image of President of the US">
+                  <div class="card-body noyPad p-1">
+                    <h5 class="card-title text-decoration-underline text-center pt-2">Assoc. Justice Stephen G. Breyer</h5>
+                    <p class="card-text">
+                      <ul class="list-unstyled">
+                        <li class="fw-bold fst-italic">Nominated By: </dt>
+                        <li class="ps-3"><span id="nom2">William Clinton</span> <span id="nom2party">(Dem)</span></li>
+                        <li class="fw-bold fst-italic">Served Since: </dt>
+                        <li class="ps-3"><span id="assoc2Served">Aug 1994</span></li>
+                      </ul>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+              <div class="card mb-3 mx-auto bg-light bg-opacity-75 p-3 p-sm-1 h-100 round">
+                <a class="text-dark text-decoration-none" href="#">
+                  <img  
+                    class="card-img-top overflow-hidden round"
+                    src="./headshot.png" 
+                    alt="Image of President of the US">
+                  <div class="card-body noyPad p-1">
+                    <h5 class="card-title text-decoration-underline text-center pt-2">Assoc. Justice Samuel A. Alito</h5>
+                    <p class="card-text">
+                      <ul class="list-unstyled">
+                        <li class="fw-bold fst-italic">Nominated By: </dt>
+                        <li class="ps-3"><span id="nom3">George W. Bush</span> <span id="nom3party">(Rep)</span></li>
+                        <li class="fw-bold fst-italic">Served Since: </dt>
+                        <li class="ps-3"><span id="assoc3Served">Jan 2006</span></li>
+                      </ul>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+              <div class="card mb-3 mx-auto bg-light bg-opacity-75 p-3 p-sm-1 h-100 round">
+                <a class="text-dark text-decoration-none" href="#">
+                  <img  
+                    class="card-img-top overflow-hidden round"
+                    src="./headshot.png" 
+                    alt="Image of President of the US">
+                  <div class="card-body noyPad p-1">
+                    <h5 class="card-title text-decoration-underline text-center pt-2">Assoc. Justice Sonia Sotomayor</h5>
+                    <p class="card-text">
+                      <ul class="list-unstyled">
+                        <li class="fw-bold fst-italic">Nominated By: </dt>
+                        <li class="ps-3"><span id="nom4">Barack Obama</span> <span id="nom4party">(Dem)</span></li>
+                        <li class="fw-bold fst-italic">Served Since: </dt>
+                        <li class="ps-3"><span id="assoc4Served">Aug 2009</span></li>
+                      </ul>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+              <div class="card mb-3 mx-auto bg-light bg-opacity-75 p-3 p-sm-1 h-100 round">
+                <a class="text-dark text-decoration-none" href="#">
+                  <img  
+                    class="card-img-top overflow-hidden round"
+                    src="./headshot.png" 
+                    alt="Image of President of the US">
+                  <div class="card-body noyPad p-1">
+                    <h5 class="card-title text-decoration-underline text-center pt-2">Assoc. Justice Elena Kagan</h5>
+                    <p class="card-text">
+                      <ul class="list-unstyled">
+                        <li class="fw-bold fst-italic">Nominated By: </dt>
+                        <li class="ps-3"><span id="nom5">Barack Obama</span> <span id="nom5party">(Dem)</span></li>
+                        <li class="fw-bold fst-italic">Served Since: </dt>
+                        <li class="ps-3"><span id="assoc5Served">Aug 2010</span></li>
+                      </ul>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+              <div class="card mb-3 mx-auto bg-light bg-opacity-75 p-3 p-sm-1 h-100 round">
+                <a class="text-dark text-decoration-none" href="#">
+                  <img  
+                    class="card-img-top overflow-hidden round"
+                    src="./headshot.png" 
+                    alt="Image of President of the US">
+                  <div class="card-body noyPad p-1">
+                    <h5 class="card-title text-decoration-underline text-center pt-2">Assoc. Justice Neil M. Gorsuch</h5>
+                    <p class="card-text">
+                      <ul class="list-unstyled">
+                        <li class="fw-bold fst-italic">Nominated By: </dt>
+                        <li class="ps-3"><span id="nom6">Donald J. Trump</span> <span id="nom6party">(Rep)</span></li>
+                        <li class="fw-bold fst-italic">Served Since: </dt>
+                        <li class="ps-3"><span id="assoc6Served">Apr 2017</span></li>
+                      </ul>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+              <div class="card mb-3 mx-auto bg-light bg-opacity-75 p-3 p-sm-1 h-100 round">
+                <a class="text-dark text-decoration-none" href="#">
+                  <img  
+                    class="card-img-top overflow-hidden round"
+                    src="./headshot.png" 
+                    alt="Image of President of the US">
+                  <div class="card-body noyPad p-1">
+                    <h5 class="card-title text-decoration-underline text-center pt-2">Assoc. Justice Brett M. Kavanaugh</h5>
+                    <p class="card-text">
+                      <ul class="list-unstyled">
+                        <li class="fw-bold fst-italic">Nominated By: </dt>
+                        <li class="ps-3"><span id="nom7">Donald J. Trump</span> <span id="nom7party">(Rep)</span></li>
+                        <li class="fw-bold fst-italic">Served Since: </dt>
+                        <li class="ps-3"><span id="assoc7Served">Oct 2018</span></li>
+                      </ul>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+              <div class="card mb-3 mx-auto bg-light bg-opacity-75 p-3 p-sm-1 h-100 round">
+                <a class="text-dark text-decoration-none" href="#">
+                  <img  
+                    class="card-img-top overflow-hidden round"
+                    src="./headshot.png" 
+                    alt="Image of President of the US">
+                  <div class="card-body noyPad p-1">
+                    <h5 class="card-title text-decoration-underline text-center pt-2">Assoc. Justice Amy Coney Barrett</h5>
+                    <p class="card-text">
+                      <ul class="list-unstyled">
+                        <li class="fw-bold fst-italic">Nominated By: </dt>
+                        <li class="ps-3"><span id="nom8">Donald J. Trump</span> <span id="nom8party">(Rep)</span></li>
+                        <li class="fw-bold fst-italic">Served Since: </dt>
+                        <li class="ps-3"><span id="assoc8Served">Oct 2020</span></li>
+                      </ul>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+      </main>
+
+      <footer class="container-fluid mt-2">
+        <div class="d-md-flex pt-4 pb-4 mx-auto xwFitContent">
+          <div class="mx-auto xwFitContent">
+            <div class="fw-bold text-light"><h5>Content</h5></div>
+            <ul class="list-unstyled ps-3">
+              <li><a href="./index.html" class="navLk-lt">Home</a></li>
+              <li><a href="./fedExecutives.html" class="navLk-lt">Federal Executives</a></li>
+              <li><a href="./fedJustices.html" class="navLk-lt">Federal Justices</a></li>
+              <li><a href="./fedCongress.html" class="navLk-lt">Federal Congress</a></li>
+            </ul>
+          </div>
+          <div class="ms-md-5 xwFitContent">
+            <div class="fw-bold text-light"><h5>Support</h5></div>
+            <ul class="list-unstyled ps-3">
+              <li><a href="./search.html" class="navLk-lt">Search</a></li>
+              <li><a href="./aboutus.html" class="navLk-lt">About Us</a></li>
+              <li><a href="./contactus.html" class="navLk-lt">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="rounded seperator" style="color: aliceblue;">
+        <div id="footer-div" class="mx-auto mt-3 pb-4 d-flex flex-row justify-content-center align-items-middle">
+          <!-- Twitter Icon and Link -->
+          <a href="https://twitter.com" class="mx-2 text-light">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                </svg>
+          </a>
+          <!-- End of TWITTER -->
+          <!-- Instagram Icon and Link -->
+          <a href="https://instagram.com" class="mx-2 text-light">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                </svg>
+          </a>
+          <!-- End of INSTAGRAM -->
+        </div>
+      </footer>
+
+
+      
+      <div>   <!-- JAVASCRIPT -->
+          <!-- Bootstrap Bundle with Popper -->
+          <script 
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+            crossorigin="anonymous">
+          </script>
+
+          <script> 
+            var btnSearchNav = document.getElementById("searchBarIcon");
+            var btnStateOnly= document.getElementById("btn-stateOnly");
+            var btnStateBranch = document.getElementById("btn-stateBranch");
+            var btnHamburg = document.getElementById("hamburgIcon");
+            var selectedState = document.getElementById("select-state");
+
+
+            btnSearchNav.addEventListener("click", focusOnSearchBar)
+            btnStateOnly.addEventListener("click", focusOnSearchBar)
+            btnStateBranch.addEventListener("click", focusOnSearchBar)
+
+            function focusOnSearchBar(){document.getElementById("searchInput").focus();}
+            function submitState(){}
+            function clickPress(event){
+              if(event.keyCode == 13){
+                //  enter code that will use the search bar
+                document.getElementById("searchInput").in
+              }
+            }
+          </script>
+      </div>
+    </div>
+  </body>
+</html>
