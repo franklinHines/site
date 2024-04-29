@@ -1,0 +1,160 @@
+
+/* Practice HTML/CSS Custom stylesheet with bootstrap */
+html, body, #home{height: 100%;}
+body{background-color: black;}
+#home{
+    display: flex;
+    flex-direction: column;
+}
+main{flex: 1 0 auto;}
+footer{
+    flex-shrink: 0;
+    background: rgb(23, 29, 116);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    flex-shrink: 0;
+    background-color: rgba(218, 44, 35, 0.3);
+}
+
+.fitScreen{width: 97%;}
+.card{max-width: 400px;}
+.subCard{max-width: 275px;}
+.box{border: 5px groove black;}
+.bg-img{
+    background: black no-repeat top center;
+    background-size: cover;
+}
+.hsideHeader{
+    height: 91px;
+    background-color: rgba(0, 10, 150, 0.75);
+}
+
+.navbar-toggler{
+    outline: none;
+    box-shadow: none;
+}
+.navLk-lt{
+    color: white;
+    text-decoration: none;
+}
+
+/* LoVe/HAte - order of links */
+.navLk-lt:hover{
+    color: rgb(161, 161, 161);
+}
+
+.nav-link{color: black;}
+
+.navLk-dk{
+    color: black;
+    text-decoration: none;
+}
+
+/* LoVe/HAte - order of links */
+.navLk-dk:hover{
+    color: rgb(133, 133, 133);
+}
+
+.noxPad{
+    padding-right: 0;
+    padding-left: 0;
+}
+.noyPad{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.noxMarg{
+    margin-left: 0;
+    margin-right: 0;
+}
+.noyMarg{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.titleSection{min-height: 60px;}
+.xwFitContent{max-width: fit-content;}
+.xwMaxContent{min-width: max-content;}
+.round{
+    border-radius: 8px;
+    -moz-border-radius: 8x;
+    -webkit-border-radius: 8px;
+}
+
+.bgTransp{background-color: transparent;}
+
+.activeLink{color: rgb(95, 95, 95);}
+.btn-close{
+    color: white;
+    opacity: 1;
+}
+
+#searchPageSection{min-width: 90%;}
+#navMain{max-width: 300px;}
+/************ SEARCH BTN & SEARCH BAR OPERATIONS ************/
+/************************************************************/
+
+/*
+.navbar{
+    /*   z-index should be above .close-navbar-toggler 
+    z-index: 1;  /* ends up disallowing dismiss by navbar
+}
+*/
+
+.close-navbar-toggler{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index: 1;
+}
+.close-navbar-toggler.collapsed{z-index: -1;}
+.seperator{height:1px;}
+
+/*************************************************************/
+/********* end of search btn & search bar operations *********/
+
+
+/*  BTN IN TEXT BAR - SETUP THAT SETS SEARCH BTN INSIDE AN INPUT BAR  */
+/**********************************************************************/
+.searchInput-container{
+    position: relative;
+    z-index: 1;
+}
+.searchInput{
+    width: 100%;
+
+        /* extra padding on right so written text doesn't intrude on search icon btn */
+    padding: 5px 50px 5px 10px; 
+}
+.btn-searchInput{
+    position: absolute;
+    right: 3px;     /* sets position #px from right */
+    top: 3px;       /* sets position #px from top */
+    bottom: 3px;    /* sets position #px from bottom */
+    padding: 0 5px;  /* padding: y-axis x-axis; */
+    color: rgb(51, 51, 51);
+    z-index: 2;
+}
+/**********************************************************************/
+/**********************  end of BTN IN TEXT BAR  **********************/
+
+
+        /* box-shadow: horiz-offset | vert-offset | blur(opt) | spread(opt) | color | inset/initial/inherit */
+.btn:focus{box-shadow: 0 0 0 .15rem rgb(194, 194, 194);}
+
+
+@media(min-width: 576px){
+    .w-sm-80{width: 80%;}
+}
+@media(min-width: 768px){
+    .w-md-85{width: 85%;}
+}
+@media(min-width: 992px){
+    .w-lg-97{width: 97%;}
+}
