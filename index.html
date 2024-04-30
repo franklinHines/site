@@ -12,57 +12,84 @@
     <title>Home | [SITE]</title>
   </head>
 
+<body>
 
-  <body class="bg-light">
-    <nav class="navbar navbar-expand-xl navbar-right navbar-light off-canvas bg-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" data-bs-target="off-canvas"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse off-canvas-nav" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#apps">Apps</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#privacy">Privacy Policy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-          
-            <!-- The main content -->
-            <div class="container">
-              <h1>Your Website Content</h1>
-              <p>Some text and other elements here...</p>
-            </div>
-            
-            <!-- The off-canvas menu -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <!-- Your menu items go here -->
-                <ul class="list-group">
-                  <li class="list-group-item">Menu Item 1</li>
-                  <li class="list-group-item">Menu Item 2</li>
-                  <li class="list-group-item">Menu Item 3</li>
-                </ul>
-              </div>
-            </div>
-          <!-- End Input -->
-          
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Homepage</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 id="offcanvasRightLabel">Menu</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-    </nav>
+        <div class="offcanvas-body">
+          <!-- Menu items go here -->
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-    <container><p>HELLO</p></container>
-  </body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <form>
+          <div class="mb-3">
+            <label for="dropdown" class="form-label">Dropdown Menu</label>
+            <select class="form-select" id="dropdown">
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Radio Buttons</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radio1" id="radio1a" value="option1">
+              <label class="form-check-label" for="radio1a">
+                Option 1
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radio1" id="radio1b" value="option2">
+              <label class="form-check-label" for="radio1b">
+                Option 2
+              </label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Radio Buttons (3 Choices)</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radio2" id="radio2a" value="option1">
+              <label class="form-check-label" for="radio2a">
+                Option 1
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radio2" id="radio2b" value="option2">
+              <label class="form-check-label" for="radio2b">
+                Option 2
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radio2" id="radio2c" value="option3">
+              <label class="form-check-label" for="radio2c">
+                Option 3
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
