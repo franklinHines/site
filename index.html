@@ -13,38 +13,172 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Homepage</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#searchBar" aria-controls="searchBar" aria-expanded="false" aria-label="Toggle search bar">
-        <span class="fas fa-search"></span>
-      </button>
-      <form id="searchBar" class="form-inline my-2 my-lg-0 search-bar">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </nav>
-  
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="sidebarLabel">Sidebar Menu</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <!-- Sidebar menu content goes here -->
-        <ul class="list-group">
-          <li class="list-group-item">Menu Item 1</li>
-          <li class="list-group-item">Menu Item 2</li>
-          <li class="list-group-item">Menu Item 3</li>
-        </ul>
-      </div>
-    </div>
-  
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+    <div id="home" class="container-fluid noxPad bg-img" style="background-image: url('./src/us-flag-dark-vblur.jpg');">
+      <!--  Add before navbar to collapse navigation menu when clicking outside of nav  -->
+      <a
+        class="close-navbar-toggler collapsed" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#searchInput-container" 
+        aria-controls="searchInput-container" 
+        aria-expanded="false" 
+        aria-label="Toggle Search Bar"
+        ></a>
+
+      <header class="container-fluid">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-brand ms-md-5"><a class="navLk text-light" href="./index.html">
+              <img src="https://via.placeholder.com/65?text=Logo" alt="logo image" width="65"></a>
+              <a href="./index.html" class="navLk-lt ms-1">[Name]</a>
+            </div>
+          <!-- <div class="col-6 text-light text-center box"><h1>[Comp Name]</h1></div> -->
+
+          <!-- Search Bar & Icon | Hamburg Menu -->
+            <!-- Search Icon -->
+            <div class="btn-toolbar d-flex justify-content-end" role="toolbar">
+              <div class="btn-group" role="group">
+                <button 
+                  id="searchBarIcon"
+                  class="btn navLk-lt me-1"
+                  type="button"
+                  data-bs-toggle="collapse"     
+                  data-bs-target="#searchInput-container">
+                  <!-- Search Icon Vector (svg) -->
+                  <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                  </span>
+                </button> 
+
+                  <!-- Hamburg Icon & Menu -->
+                <div class="me-md-5">
+                  <button
+                    id="hamburgIcon"
+                    class="btn navLk-lt"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#navMain">
+                      <!-- <span class="navbar-toggler-icon"></span> -->
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                      </span>
+                  </button>
+                </div>
+              </div>
+
+                <!-- SIDE BAR MENU -->
+                <div id="navMain" class="offcanvas offcanvas-end bg-light bg-opacity-75 w-50" tabindex="-1">
+                  <div class="offcanvas-header hsideHeader">
+                    <h5 class="offcanvas-title text-light">Title</h5>
+                    <button 
+                      id="closeOffcanvas"
+                      class="btn btn-close btn-close-white text-reset focus" 
+                      alt="Close Button"
+                      data-bs-dismiss="offcanvas" 
+                      aria-label="Close">
+                    </button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav me-1 mwFitContent float-end">
+                      <li class="nav-item active ps-4">
+                        <a class="text-decoration-none navLk-dk activeLink" href="./index.html">Home</a></li>
+                      <ul class="navbar-nav float-end me-3 mt-3 mwFitContent">
+                        <h6 class="fw-bold">Federal</h6>
+                        <li class="nav-item ps-4">
+                          <a class="text-decoration-none navLk-dk" href="./fedExecutives.html">Executives</a>
+                        </li>
+                        <li class="nav-item ps-4">
+                          <a class="text-decoration-none navLk-dk" href="./fedJustices.html">Justices</a>
+                        </li>
+                        <li class="nav-item ps-4">
+                          <a class="text-decoration-none navLk-dk" href="./fedCongress.html">Congress</a>
+                        </li>
+                      </ul>
+                      
+                      <ul class="navbar-nav float-end mt-3 mwFitContent">
+                        <li class="nav-item">
+                          <div class="me-3">
+                            <h6 class="fw-bold my-auto pb-1 xwFitContent">State </h6>
+                            <select id="select-state" class="form-select" name="state">
+                              <option value="none" selected>--</option>
+                              <option value="alabama">Alabama</option>
+                              <option value="alaska">Alaska</option>
+                              <option value="arizona">Arizona</option>
+                              <option value="arkansas">Arkansas</option>
+                              <option value="california">California</option>
+                              <option value="colorado">Colorado</option>
+                              <option value="connecticut">Connecticut</option>
+                              <option value="delaware">Delaware</option>
+                              <option value="florida">Florida</option>
+                              <option value="georgia">Georgia</option>
+                              <option value="hawaii">Hawaii</option>
+                              <option value="idaho">Idaho</option>
+                              <option value="illinois">Illinois</option>
+                              <option value="indiana">Indiana</option>
+                              <option value="iowa">Iowa</option>
+                              <option value="kansas">Kansas</option>
+                              <option value="kentucky">Kentucky</option>
+                              <option value="louisiana">Louisiana</option>
+                              <option value="maine">Maine</option>
+                              <option value="maryland">Maryland</option>
+                              <option value="massachusetts">Massachusetts</option>
+                              <option value="michigan">Michigan</option>
+                              <option value="minnesota">Minnesota</option>
+                              <option value="mississippi">Mississippi</option>
+                              <option value="missouri">Missouri</option>
+                              <option value="montana">Montana</option>
+                              <option value="nebraska">Nebraska</option>
+                              <option value="nevada">Nevada</option>
+                              <option value="new-hampshire">New Hampshire</option>
+                              <option value="new-jersey">New Jersey</option>
+                              <option value="new-mexico">New Mexico</option>
+                              <option value="new-york">New York</option>
+                              <option value="north-carolina">North Carolina</option>
+                              <option value="north-dakota">North Dakota</option>
+                              <option value="ohio">Ohio</option>
+                              <option value="oklahoma">Oklahoma</option>
+                              <option value="oregon">Oregon</option>
+                              <option value="pennsylvania">Pennsylvania</option>
+                              <option value="rhode-island">Rhode Island</option>
+                              <option value="south-carolina">South Carolina</option>
+                              <option value="south-dakota">South Dakota</option>
+                              <option value="tennessee">Tennessee</option>
+                              <option value="texas">Texas</option>
+                              <option value="utah">Utah</option>
+                              <option value="vermont">Vermont</option>
+                              <option value="virginia">Virginia</option>
+                              <option value="washington">Washington</option>
+                              <option value="west-virginia">West Virginia</option>
+                              <option value="wisconsin">Wisconsin</option>
+                              <option value="wyoming">Wyoming</option>
+                              <option value="dc">Washington DC</option>
+                            </select>
+                          </div>
+                        </li>
+                        <button id="btn-stateOnly"
+                          class="btn btn-primary mx-auto mt-1 xwFitContent"
+                          >Submit
+                        </button>
+                      </ul>
+
+                      <ul class="navbar-nav float-end me-3 mt-3 mwFitContent">
+                        <h6 class="fw-bold">Support</h6>
+                        <li class="nav-item ps-4">
+                          <a class="text-decoration-none navLk-dk" href="./aboutus.html">About Us</a>
+                        </li>
+                        <li class="nav-item ps-4">
+                          <a class="text-decoration-none navLk-dk" href="./contactus.html">Contact Us</a>
+                        </li>
+                      </ul>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </nav>
+      </header>
   </body>
 </html>
